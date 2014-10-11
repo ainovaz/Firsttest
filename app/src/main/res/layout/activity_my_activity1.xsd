@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RelativeLayout" type="RelativeLayoutType"/>
+  <xs:complexType name="RelativeLayoutType">
+    <xs:sequence>
+      <xs:element type="TextViewType" name="TextView"/>
+    </xs:sequence>
+    <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:paddingLeft" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:paddingRight" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:paddingTop" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="and:paddingBottom" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <xs:attribute ref="tool:context" xmlns:tool="http://schemas.android.com/tools"/>
+  </xs:complexType>
+  <xs:complexType name="TextViewType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="and:text" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_width" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <xs:attribute ref="and:layout_height" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
